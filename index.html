@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="container my-5 text-center">
+      <!-- Login Form -->
+      <div id="loginForm" class="group m-auto w-75 p-5">
+        <h1>Smart Login System</h1>
+        <input
+          id="signinEmail"
+          class="form-control my-3"
+          placeholder="Enter your email"
+          type="text"
+        />
+        <input
+          id="signinPassword"
+          class="form-control my-3"
+          placeholder="Enter your password"
+          type="password"
+        />
+        <p id="incorrect"></p>
+        <button onclick="login()" class="btn btn-outline-info w-100 my-3">
+          Login
+        </button>
+        <p class="text-white">
+          Don’t have an account?
+          <a class="text-white" href="#" onclick="showSignUp()">Sign Up</a>
+        </p>
+      </div>
+
+      <!-- Sign Up Form -->
+      <div id="signupForm" class="group m-auto w-75 p-5" style="display: none;">
+        <h1>Create an Account</h1>
+        <input
+          id="signupName"
+          class="form-control my-3"
+          placeholder="Enter your name"
+          type="text"
+        />
+        <input
+          id="signupEmail"
+          class="form-control my-3"
+          placeholder="Enter your email"
+          type="text"
+        />
+        <input
+          id="signupPassword"
+          class="form-control my-3"
+          placeholder="Enter your password"
+          type="password"
+        />
+        <p id="signupMessage"></p>
+        <button onclick="signup()" class="btn btn-outline-success w-100 my-3">
+          Sign Up
+        </button>
+        <p class="text-white">
+          Already have an account?
+          <a class="text-white" href="#" onclick="showLogin()">Sign In</a>
+        </p>
+      </div>
+
+      <!-- Welcome Page -->
+      <div id="welcomePage" class="group m-auto w-75 p-5" style="display: none;">
+        <h1 id="welcomeMessage" class="text-white"></h1>
+        <button onclick="logout()" class="btn btn-outline-warning w-25 mt-3">
+          Logout
+        </button>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
